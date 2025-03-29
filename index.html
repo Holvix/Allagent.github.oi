@@ -1,11 +1,76 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="3;url=https://t.me/Easytaskearnig">
-    <title>Redirecting...</title>
+    <title>Instagram Downloader</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(to right, #ff9966, #ff5e62);
+            color: white;
+            padding: 50px;
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        input {
+            padding: 10px;
+            width: 300px;
+            border: none;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #45a049;
+        }
+        .result, .error {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .result a {
+            color: #fff;
+            background: #008CBA;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .result a:hover {
+            background: #005f73;
+        }
+    </style>
+    <script>
+        async function fetchInstagramMedia() {
+            const url = document.getElementById('url').value;
+            if (!url) {
+                alert('Please enter a valid Instagram URL');
+                return;
+            }try {
+            const apiUrl = `https://api.example.com/instagram?url=${encodeURIComponent(url)}`; // Replace with a working API
+            const response = await fetch(apiUrl);
+            const data = await response.json();
+            
+            if (data && data.media_url) {
+                document.getElementById('result').innerHTML = `<a href='${data.media_url}' download>Download</a>`;
+            } else {
+                document.getElementById('result').innerHTML = `<div class='error'>Invalid URL or API issue.</div>`;
+            }
+        } catch (error) {
+            document.getElementById('result').innerHTML = `<div class='error'>Error fetching data.</div>`;
+        }
+    }
+</script>
+
 </head>
 <body>
-    <p>Redirecting you to Telegram... If not redirected, <a href="https://t.me/Easytaskearnig">click here</a>.</p>
+    <h2>Instagram Video/Image Downloader</h2>
+    <input type="text" id="url" placeholder="Instagram post URL" required>
+    <button onclick="fetchInstagramMedia()">Download</button>
+    <div id="result" class="result"></div>
 </body>
 </html>
